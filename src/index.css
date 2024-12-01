@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(to bottom right, #0a0f0d, #000000);
+  min-height: 100vh;
+}
+
+/* Add a subtle green glow effect */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.15), transparent 70%);
+  z-index: -1;
+  border-radius: inherit;
+}
